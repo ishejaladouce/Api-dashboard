@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Left section: Search + Subreddit info + Show Usage -->
+    <section class="sidebar">
+        <h2>Search Subreddit</h2>
+
+        <!-- Input for subreddit search -->
+        <div class="form-group">
+            <label for="subredditName">Enter Subreddit Name:</label>
+            <input type="text" id="subredditName" placeholder="e.g. programming">
+        </div>
+
+        <!-- Card to display fetched subreddit info -->
+        <div id="subredditInfoCard" class="info-card">
+            <div class="info-row">
+                <span class="info-label">Name:</span>
+                <span class="info-value" id="name">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Subscribers:</span>
+                <span class="info-value" id="subscribers">-</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Rules:</span>
+                <span class="info-value" id="rules">-</span>
+            </div>
+
+            <!-- Show Usage button appears after the info -->
+            <button id="showUsageBtn">Show Usage</button>
+        </div>
+    </section>
+
+    <!-- Right section: API usage (hidden initially) -->
+    <section id="usagePanel" class="usage-panel" style="display:none;">
+        <h2>API Usage</h2>
+
+        <div class="info-card">
+            <div class="info-row">
+                <span class="info-label">Requests Sent:</span>
+                <span class="info-value" id="requestsSent">0</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Remaining Requests:</span>
+                <span class="info-value" id="remainingRequests">0%</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Time to Reset:</span>
+                <span class="info-value" id="resetTime">0 min</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
