@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Dashboard</title>
+    <title>Subreddit API Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Left section: Search + Subreddit info + Show Usage -->
+    <!-- LEFT SECTION: Search + Subreddit Info + Show Usage -->
     <section class="sidebar">
         <h2>Search Subreddit</h2>
 
-        <!-- Input for subreddit search -->
-        <div class="form-group">
-            <label for="subredditName">Enter Subreddit Name:</label>
-            <input type="text" id="subredditName" placeholder="e.g. programming">
+        <!-- Search bar with icon -->
+        <div class="search-container">
+            <input type="text" id="subredditName" placeholder="Type subreddit name here">
+            <button id="searchBtn">🔍</button>
         </div>
 
         <!-- Card to display fetched subreddit info -->
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <!-- Right section: API usage (hidden initially) -->
+    <!-- RIGHT SECTION: API Usage (hidden initially) -->
     <section id="usagePanel" class="usage-panel" style="display:none;">
         <h2>API Usage</h2>
 
